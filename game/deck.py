@@ -1,23 +1,3 @@
-'''
-Types of Cards
-
-- Exploding Kitten (4)
-- Defuse (6)
-- Nope (5)
-- See the Future (5)
-- Attack (4)
-- Skip (4)
-- Favor (4)
-- Shuffle (4)
-- Powerless
-    - Tacocat (4)
-    - Beard Cat (4)
-    - Rainbow Cat (4)
-    - Cattermelon (4)
-    - Hairy Potato Cat (4)
-
-'''
-
 from card import Card
 import random
 
@@ -30,7 +10,6 @@ class Deck():
 
         self.BuildDeck()
         self.ShuffleDeck()
-
     
     def BuildDeck(self):
         defuses = 6 - self.players
@@ -64,7 +43,3 @@ class Deck():
     
     def Discard(self, card):
         self.discard.append(card)
-
-
-myDeck = Deck(5)
-
