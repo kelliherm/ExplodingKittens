@@ -1,3 +1,3 @@
-# Exploding Kittens Game
+# Exploding Kittens
 
 ![](./graphics/resources/coverart.png)
