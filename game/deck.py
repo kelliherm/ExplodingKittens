@@ -27,9 +27,7 @@ class Deck():
             self.cards.append(Card(1))
 
     def ShuffleDeck(self):
-        for i in range(len(self.cards) - 1, 0, -1):
-            r = random.randint(0, i)
-            self.cards[i], self.cards[r] = self.cards[r], self.cards[i]
+        random.shuffle(self.cards)
 
     def DrawCard(self):
         return self.cards.pop(0)
