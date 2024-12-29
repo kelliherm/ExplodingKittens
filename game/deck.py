@@ -55,32 +55,23 @@ class Card():
         self.AssignName()
 
     def AssignName(self):
-        if self.value == 0:
-            self.name = 'Exploding Kitten'
-        elif self.value == 1:
-            self.name = 'Defuse'
-        elif self.value == 2:
-            self.name = 'Nope'
-        elif self.value == 3:
-            self.name = 'See the Future'
-        elif self.value == 4:
-            self.name = 'Attack'
-        elif self.value == 5:
-            self.name = 'Skip'
-        elif self.value == 6:
-            self.name = 'Favor'
-        elif self.value == 7:
-            self.name = 'Shuffle'
-        elif self.value == 8:
-            self.name  = 'Tacocat'
-        elif self.value == 9:
-            self.name = 'Beard Cat'
-        elif self.value == 10:
-            self.name = 'Rainbow Cat'
-        elif self.value == 11:
-            self.name = 'Cattermelon'
-        elif self.value == 12:
-            self.name = 'Hairy Potato Cat'
+        cards = {
+            0 : 'Exploding Kitten',
+            1 : 'Defuse',
+            2 : 'Nope',
+            3 : 'See the Future',
+            4 : 'Attack',
+            5 : 'Skip',
+            6 : 'Favor',
+            7 : 'Shuffle',
+            8 : 'Tacocat',
+            9 : 'Beard Cat',
+            10 : 'Rainbow Cat',
+            11 : 'Cattermelon',
+            12 : 'Hairy Potato Cat'
+        }
+
+        self.name = cards[self.value]
     
     def ShowCard(self):
         print(self.name)
