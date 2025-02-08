@@ -1,11 +1,11 @@
 import random
 
 class Deck():
-    def __init__(self, players):
+    def __init__(self, numplayers):
         self.cards = []
         self.discard = []
 
-        self.players = players
+        self.numplayers = numplayers
 
         self.BuildDeck()
         self.ShuffleDeck()
@@ -18,11 +18,11 @@ class Deck():
                 self.cards.append(Card(cardvalue))
 
     def AddExtras(self):
-        explodingkittens = self.players - 1
+        explodingkittens = self.numplayers - 1
         for explodingkitten in range(explodingkittens):
             self.cards.append(Card(0))
         
-        defuses = 2 if self.players == 2 else 6 - self.players
+        defuses = 2 if self.numplayers == 2 else 6 - self.numplayers
         for defuse in range(defuses):
             self.cards.append(Card(1))
 
